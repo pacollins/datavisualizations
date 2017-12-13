@@ -91,15 +91,15 @@ function drawChart() {
   data.addColumn('string', 'From');
   data.addColumn('string', 'To');
   data.addColumn('number', 'Weight');
-  if (park == "mk") {
+  if (park == 'mk') {
   data.addRows(mkdata);
-  } if (park == "ep") {
+  } if (park == 'ep') {
   data.addRows(epdata);
-  } if (park == "hs") {
+  } if (park == 'hs') {
   data.addRows(hsdata);
-  } if (park == "ak") {
+  } if (park == 'ak') {
   data.addRows(akdata);
-  } if (park == "all") {
+  } if (park == 'all') {
   parkdata = [];
   data.addRows(mkdata);
   data.addRows(epdata);
@@ -109,11 +109,10 @@ function drawChart() {
 
   // Sets chart options.
   var options = {
-    width: 960,
-    height: 600,
+  
   };
 
   // Instantiates and draws our chart, passing in some options.
-  var chart = new google.visualization.Sankey(document.getElementById('sankey_basic'));
+  var chart = new google.visualization.Sankey(document.getElementById('sankey'));
   chart.draw(data, options);
 }

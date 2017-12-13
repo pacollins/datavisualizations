@@ -1,33 +1,64 @@
 <html>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>WDW Park Flow Visualizations</title>
-	<meta name="author" content="Patrick A Collins">
-	<meta name="description" content="Visualizations for the flow of guests around Walt Disney World.">
-	<meta name="keywords" content="walt, disney, world, flow, visualiations">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta property="og:title" content="Walt Disney World Flow Visualizations">
-	<meta property="og:url" content="https://pacollins.github.io/datavisualizations/wdwtripflow">
-	<meta property="og:description" content="Visualizations for the flow of guests around Walt Disney World.">
-	<meta property="og:image" content="https://pacollins.github.io/wdwapcalc/Passholder.jpg">
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-  <script type="text/javascript" src="script.js?version=2"></script>
-	<link rel="author" href="https://www.pacollins.com/about/" />
-	<link rel="license" href="https://github.com/pacollins/datavisualizations/blob/master/LICENSE" />
-	<!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
-</head>
-<body align="center">
-<select id="parkselect" onchange="drawChart()">
-  <option value="mk">Magic Kingdom</option>
-  <option value="ep">EPCOT</option>
-  <option value="hs">Hollywood Studios</option>
-  <option value="ak">Animal Kingdom</option>
-  <option value="all">All</option>
-</select>
-<div id="sankey_basic" align="center"></div>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>WDW Park Flow Visualizations</title>
+    <meta name="author" content="Patrick A Collins">
+    <meta name="description" content="Visualizations for the flow of guests around Walt Disney World.">
+    <meta name="keywords" content="walt, disney, world, flow, visualiations">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Walt Disney World Flow Visualizations">
+    <meta property="og:url" content="https://pacollins.github.io/datavisualizations/wdwtripflow">
+    <meta property="og:description" content="Visualizations for the flow of guests around Walt Disney World.">
+    <meta property="og:image" content="https://pacollins.github.io/wdwapcalc/Passholder.jpg">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="script.js?version=2"></script>
+    <link rel="author" href="https://www.pacollins.com/about/" />
+    <link rel="license" href="https://github.com/pacollins/datavisualizations/blob/master/LICENSE" />
+    <link rel="stylesheet" href="https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-default.min.css">
+    <link rel="stylesheet" href="https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-pwa.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">Data Visualizations</a>
+      <label class="drawer-toggle button hidden-md hidden-lg" for="navigation-toggle"></label>
+      <button class="hidden-sm" href="#">Home</button>
+      <span class="hidden-sm" >|</span>
+      <button class="hidden-sm" disabled>About</button>
+      <button class="hidden-sm" disabled>Contact</button>
+    </header>
+    <input type="checkbox" id="navigation-toggle">
+    <nav class="drawer hidden-md hidden-lg">
+      <label class="close" for="navigation-toggle"></label>
+      <button href="about" disabled><h4 style="margin-left: 0;">About</h4></a>
+      <button href="contact" disabled><h4 style="margin-left: 0;">Contact</h4></a>
+    </nav>
+    <div class="container">
+      <div class="col-md">
+        <figure align="center">
+          <label for="parkselect">Initial flow of Guests within</label>
+          <select id="parkselect" onchange="drawChart()">
+            <option value="mk">Magic Kingdom</option>
+            <option value="ep">EPCOT</option>
+            <option value="hs">Hollywood Studios</option>
+            <option value="ak">Animal Kingdom</option>
+            <option value="all">All</option>
+          </select>
+          <div id="sankey"></div>
+          <div id="sankeypng"><p>Please view on a larger device. I am working on a way to make this look good on smaller screens.</p><p>Thank You. -Patrick</p></div>
+          <figcaption>Source: Data collected via <a href="https://www.reddit.com/r/WaltDisneyWorld">r/WaltDisneyWorld</a>.</figcaption>
+        </figure>
+      </div>
+    </div>
+    <footer class="sticky">
+    <p>
+      Copyright &copy; 2017<script>new Date().getFullYear()>2017&&document.write("-"+new Date().getFullYear());</script> Patrick Collins | <a href="#">About</a> | <a href="#">Terms of Use</a><br>
+      Powered by <a href="https://developers.google.com/chart/">Google Charts</a>, <a href="https://minicss.org/">mini.css</a>, and <a href="https://www.github.com/">GitHub Pages</a>.</p>
+    </footer>
+  </body>
 </html>
