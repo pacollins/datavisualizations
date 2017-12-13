@@ -71,10 +71,20 @@ function drawChart() {
                 ['Sunset Boulevard','Beauty and the Beast - Live on Stage',1]];
   var akdata = [['Animal Kingdom','Oasis',1],
                 ['Animal Kingdom','Discovery Island',4],
-                ['Animal Kingdom','Pandora - The World of Avatar',40],
-                ['Animal Kingdom','Africa',34],
-                ['Animal Kingdom','Asia',28],
-                ['Animal Kingdom','Dinoland U.S.A.',8]];
+                ['Animal Kingdom','Pandora - The World of Avatar',43],
+                ['Animal Kingdom','Africa',36],
+                ['Animal Kingdom','Asia',31],
+                ['Animal Kingdom','Dinoland U.S.A.',8],
+                ['Oasis','Atmosphere',1],
+                ['Discovery Island','Tree of Life',1],
+                ['Pandora - The World of Avatar','Flight of Passage',23],
+                ['Pandora - The World of Avatar','Atmosphere',2],
+                ['Africa','Kilimanjaro Safaris',23],
+                ['Africa','Tusker House Restaurant',1],
+                ['Asia','Maharaja Jungle Trek',1],
+                ['Asia','Expedition Everest - Legend of the Forbidden Mountain',22],
+                ['Dinoland U.S.A.','DINOSAUR',6],
+                ['Dinoland U.S.A.','Primeval Whirl',1]];
   parkdata = mkdata;
   var park = document.getElementById('parkselect').value;
   var data = new google.visualization.DataTable();
