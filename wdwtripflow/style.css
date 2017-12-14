@@ -1,15 +1,18 @@
 #sankey {
-  width:90vw;
-  height:78vh;
+  width: 1000px;
+  height: 600px;
+}
+canvas {
+  display:block;
+  margin:1em auto;
+  background:#fff;
+  border:1px solid #ccc;
+  width: 100%;
 }
 @media only screen and (max-width: 768px) {
   #sankey {
     display: none;
   }
-}
-#sankeypng {
-  width:90vw;
-  height:57vh;
 }
 @media only screen and (min-width: 768px)  {
   #sankeypng {

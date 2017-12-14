@@ -1,4 +1,3 @@
-<html>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -38,24 +37,26 @@
       <button href="about" disabled><h4 style="margin-left: 0;">About</h4></a>
       <button href="contact" disabled><h4 style="margin-left: 0;">Contact</h4></a>
     </nav>
-    <div class="container">
-      <div class="col-md">
-        <figure align="center">
-          <label for="parkselect">Initial flow of Guests within</label>
-          <select id="parkselect" onchange="drawChart()">
-            <option value="mk">Magic Kingdom</option>
-            <option value="ep">EPCOT</option>
-            <option value="hs">Hollywood Studios</option>
-            <option value="ak">Animal Kingdom</option>
-            <option value="all">All</option>
-          </select>
+    <div class="container" align="center">
+      <div id="content" class="col-md">
+        <figure>
+          <label for="parkselect">Initial flow of Guests within
+            <select id="parkselect" onchange="drawChart()">
+              <option value="mk">Magic Kingdom</option>
+              <option value="ep">EPCOT</option>
+              <option value="hs">Hollywood Studios</option>
+              <option value="ak">Animal Kingdom</option>
+              <option value="all">All</option>
+            </select>
+          </label>
           <div id="sankey"></div>
-          <div id="sankeypng" align="center">
+          <div id="sankeypng">
             <div class="card warning">
               <div class="section">
-                <p>Please view on a larger device. I am working on a way to make the visualization look good on smaller screens.</p><p>Thank You. -Patrick</p>
+                <p>This is a rough fix for mobile devices. Will be improving over time.</p>
               </div>
             </div>
+            <canvas id="canvas"></canvas>
           </div>
           <figcaption>Source: Data collected via <a href="https://www.reddit.com/r/WaltDisneyWorld">r/WaltDisneyWorld</a>.</figcaption>
         </figure>
@@ -63,8 +64,8 @@
     </div>
     <footer>
     <p>
-      Copyright &copy; 2017<script>new Date().getFullYear()>2017&&document.write("-"+new Date().getFullYear());</script> Patrick Collins | <a href="#">About</a> | <a href="#">Terms of Use</a><br>
-      Powered by <a href="https://developers.google.com/chart/">Google Charts</a>, <a href="https://minicss.org/">mini.css</a>, and <a href="https://www.github.com/">GitHub Pages</a>.</p>
+      Copyright &copy; 2017<script>new Date().getFullYear()>2017&&document.write("-"+new Date().getFullYear());</script> Patrick Collins <span class="hidden-sm">| <a href="#">About</a> | <a href="#">Terms of Use</a><br>
+      Powered by <a href="https://developers.google.com/chart/">Google Charts</a>, <a href="https://minicss.org/">mini.css</a>, and <a href="https://www.github.com/">GitHub Pages</a>.</span></p>
     </footer>
   </body>
 </html>
