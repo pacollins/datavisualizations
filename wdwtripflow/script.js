@@ -92,7 +92,7 @@ function drawChart() {
                 ['Dinoland U.S.A.','DINOSAUR',8],
                 ['Dinoland U.S.A.','Primeval Whirl',1]];
   parkdata = mkdata;
-  var park = document.getElementById('parkselect').value;
+  park = document.getElementById('parkselect').value;
   var data = new google.visualization.DataTable();
   data.addColumn('string', 'From');
   data.addColumn('string', 'To');
