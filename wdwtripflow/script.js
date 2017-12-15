@@ -63,7 +63,7 @@ function drawChart() {
                 ['Hollywood Studios','Animation Courtyard',5],
                 ['Hollywood Studios','Sunset Boulevard',85],
                 ['Hollywood Boulevard','Atmosphere',1],
-                ['Hollywood Boulevard','March of the First Order',1]
+                ['Hollywood Boulevard','March of the First Order',1],
                 ['Hollywood Boulevard','Great Movie Ride',2],
                 ['Echo Lake','Star Tours - The Adventures Continue',8],
                 ['Grand Avenue','Atmosphere',1],
@@ -95,7 +95,7 @@ function drawChart() {
   var sedata = [['r/WaltDisneyWorld','Spring',33],
                 ['r/WaltDisneyWorld','Summer',35],
                 ['r/WaltDisneyWorld','Fall',58],
-                ['r/WaltDisneyWorld','Winter',85],
+                ['r/WaltDisneyWorld','Winter',59],
                 ['Spring','Magic Kingdom',22],
                 ['Spring','EPCOT',4],
                 ['Spring','Hollywood Studios',3],
@@ -148,7 +148,7 @@ function drawChart() {
 
   // Sets chart options.
   var options = {
-
+    sankey: {iterations:75}
   };
 
   // Instantiates and draws our chart, passing in some options.
@@ -168,12 +168,12 @@ function drawChart() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.drawImage(this,0,0);
     callback();
-    }
+  };
   img.src = 'data:image/svg+xml; charset=utf8, '+encodeURIComponent(svgURL);
-  }
+}
 
 //usage :
-drawInlineSVG(document.querySelector('svg'), ctxt, function(){console.log(canvas.toDataURL())})
+drawInlineSVG(document.querySelector('svg'), ctxt, function(){console.log(canvas.toDataURL());});
 
 }
 
@@ -236,7 +236,7 @@ window.onload = function(){
         ctx.scale(factor,factor);
         ctx.translate(-pt.x,-pt.y);
         redraw();
-    }
+    };
 
     var handleScroll = function(evt){
         var delta = evt.wheelDelta ? evt.wheelDelta/40 : evt.detail ? -evt.detail : 0;
@@ -309,5 +309,5 @@ function trackTransforms(ctx){
     ctx.transformedPoint = function(x,y){
         pt.x=x; pt.y=y;
         return pt.matrixTransform(xform.inverse());
-    }
+    };
 }

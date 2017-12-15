@@ -1,10 +1,13 @@
 #sankey {
-  height: 475px;
+  height: 480px;
 }
 canvas {
   width: 85vw;
   background:#fff;
   border:1px solid #ccc;
+}
+.modal .card {
+  margin: 0 10%;
 }
 @media only screen and (max-width: 768px) {
   #sankey {
