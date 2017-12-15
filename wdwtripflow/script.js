@@ -91,26 +91,58 @@ function drawChart() {
                 ['Asia','Kali River Rapids',2],
                 ['Dinoland U.S.A.','DINOSAUR',9],
                 ['Dinoland U.S.A.','Primeval Whirl',1]];
+  var sedata = [['r/WaltDisneyWorld','Spring',33],
+                ['r/WaltDisneyWorld','Summer',35],
+                ['r/WaltDisneyWorld','Fall',58],
+                ['r/WaltDisneyWorld','Winter',184],
+                ['Spring','Magic Kingdom',22],
+                ['Spring','EPCOT',4],
+                ['Spring','Hollywood Studios',3],
+                ['Spring','Animal Kingdom',4],
+                ['Spring','Extra Magic Hours',0],
+                ['Summer','Magic Kingdom',16],
+                ['Summer','EPCOT',7],
+                ['Summer','Hollywood Studios',4],
+                ['Summer','Animal Kingdom',4],
+                ['Summer','Extra Magic Hours',4],
+                ['Fall','Magic Kingdom',30],
+                ['Fall','EPCOT',11],
+                ['Fall','Hollywood Studios',3],
+                ['Fall','Animal Kingdom',9],
+                ['Fall','Extra Magic Hours',5],
+                ['Winter','Magic Kingdom',32],
+                ['Winter','EPCOT',15],
+                ['Winter','Hollywood Studios',5],
+                ['Winter','Animal Kingdom',3],
+                ['Winter','Extra Magic Hours',3]];
   parkdata = mkdata;
   park = document.getElementById('parkselect').value;
   var data = new google.visualization.DataTable();
   data.addColumn('string', 'From');
   data.addColumn('string', 'To');
   data.addColumn('number', 'Weight');
-  if (park == 'mk') {
+  if (park == 'se') {
+  data.addRows(sedata);
+  document.getElementById('data').innerHTML = sedata;
+  } if (park == 'mk') {
   data.addRows(mkdata);
+  document.getElementById('data').innerHTML = mkdata;
   } if (park == 'ep') {
   data.addRows(epdata);
+  document.getElementById('data').innerHTML = epdata;
   } if (park == 'hs') {
   data.addRows(hsdata);
+  document.getElementById('data').innerHTML = hsdata;
   } if (park == 'ak') {
   data.addRows(akdata);
+  document.getElementById('data').innerHTML = akdata;
   } if (park == 'all') {
   parkdata = [];
   data.addRows(mkdata);
   data.addRows(epdata);
   data.addRows(hsdata);
   data.addRows(akdata);
+  document.getElementById('data').innerHTML = mkdata + epdata + hsdata + akdata;
   }
 
   // Sets chart options.

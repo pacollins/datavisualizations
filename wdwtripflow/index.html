@@ -39,16 +39,28 @@
     </nav>
     <div class="container" align="center">
       <div id="content" class="col">
-        <figure>
-          <label for="parkselect">Initial flow of Guests within
-            <select id="parkselect" onchange="drawChart()">
-              <option value="mk">Magic Kingdom</option>
-              <option value="ep">EPCOT</option>
-              <option value="hs">Hollywood Studios</option>
-              <option value="ak">Animal Kingdom</option>
-              <option value="all">All</option>
-            </select>
-          </label>
+        <div id="dashboard">
+          <figure>
+            <label for="parkselect">Chart:
+              <select id="parkselect" onchange="drawChart()">
+                <option value="se">Seasons</option>
+                <option value="mk">Magic Kingdom</option>
+                <option value="ep">EPCOT</option>
+                <option value="hs">Hollywood Studios</option>
+                <option value="ak">Animal Kingdom</option>
+                <option value="all" class="hidden">All</option>
+              </select>
+            </label>
+            <label class="button hidden" for="modal-toggle">Show Raw Data</label>
+            <input id="modal-toggle" type="checkbox"/>
+            <div class="modal">
+              <div class="card">
+                <label for="modal-toggle" class="close"></label>
+                <h3 class="section">Raw Data</h3>
+                <code class="section" id="data"></code>
+              </div>
+            </div>
+          </div>
           <div id="sankey"></div>
           <div id="sankeypng">
             <div class="card warning">
@@ -61,7 +73,9 @@
             </div>
             <canvas id="canvas"></canvas>
           </div>
-          <figcaption>Source: Data collected via <a href="https://www.reddit.com/r/WaltDisneyWorld">r/WaltDisneyWorld</a>.</figcaption>
+          <figcaption class="tooltip" aria-label="Data based on 183 Responses. Some responses have been normalized for consistency and accuracy.">
+            Source: Data collected via <a href="https://www.reddit.com/r/WaltDisneyWorld">r/WaltDisneyWorld</a>.
+          </figcaption>
         </figure>
       </div>
     </div>
