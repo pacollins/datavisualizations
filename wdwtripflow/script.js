@@ -125,13 +125,13 @@ function drawChart() {
   var svgText = document.getElementById("sankey").getElementsByTagName("svg")[0].outerHTML;
   var canvas = document.getElementById("canvas");
   var ctxt = canvas.getContext("2d");
-  canvas.width = window.screen.width-975;
-  canvas.height = window.screen.height-565;
 
   function drawInlineSVG(svgElement, ctx, callback){
   var svgURL = new XMLSerializer().serializeToString(svgElement);
   img = new Image();
   img.onload = function(){
+    canvas.width = this.naturalWidth;
+    canvas.height = this.naturalHeight;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.drawImage(this,0,0);
     callback();

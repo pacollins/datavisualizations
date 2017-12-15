@@ -38,7 +38,7 @@
       <button href="contact" disabled><h4 style="margin-left: 0;">Contact</h4></a>
     </nav>
     <div class="container" align="center">
-      <div id="content" class="col-md">
+      <div id="content" class="col">
         <figure>
           <label for="parkselect">Initial flow of Guests within
             <select id="parkselect" onchange="drawChart()">
@@ -53,7 +53,10 @@
           <div id="sankeypng">
             <div class="card warning">
               <div class="section">
-                <p>This is a rough fix for mobile devices. Will be improving over time.</p>
+                <p>This is a rough fix for mobile devices.
+                  I am working on making the canvas navigatable.
+                  If you know how to do this and would like to help me out,
+                  check out the repo at <a href="https://www.github.com/pacollins/datavisualizations">GitHub<a>.</p>
               </div>
             </div>
             <canvas id="canvas"></canvas>
@@ -64,8 +67,8 @@
     </div>
     <footer>
     <p>
-      Copyright &copy; 2017<script>new Date().getFullYear()>2017&&document.write("-"+new Date().getFullYear());</script> Patrick Collins <span class="hidden-sm">| <a href="#">About</a> | <a href="#">Terms of Use</a><br>
-      Powered by <a href="https://developers.google.com/chart/">Google Charts</a>, <a href="https://minicss.org/">mini.css</a>, and <a href="https://www.github.com/">GitHub Pages</a>.</span></p>
+      Copyright &copy; 2017<script>new Date().getFullYear()>2017&&document.write("-"+new Date().getFullYear());</script> Patrick Collins | <a href="#">About</a> | <a href="#">Terms of Use</a><br>
+      Powered by <a href="https://developers.google.com/chart/">Google Charts</a>, <a href="https://minicss.org/">mini.css</a>, and <a href="https://www.github.com/">GitHub Pages</a>.</p>
     </footer>
   </body>
 </html>
