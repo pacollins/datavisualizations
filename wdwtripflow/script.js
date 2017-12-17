@@ -6,7 +6,7 @@ function drawChart() {
                 ['Magic Kingdom','Adventureland',27],
                 ['Magic Kingdom','Frontierland',34],
                 ['Magic Kingdom','Liberty Square',3],
-                ['Magic Kingdom','Fantasyland',27],
+                ['Magic Kingdom','Fantasyland',28],
                 ['Magic Kingdom','Tomorrowland',73],
                 ['Mainstreet U.S.A.','Cinderella Castle',2],
                 ['Mainstreet U.S.A.','Pictures/View/Atmosphere',3],
@@ -35,7 +35,7 @@ function drawChart() {
                 ['Tomorrowland','Carousel of Progress',3]];
   var epdata = [['EPCOT','Future World East',57],
                 ['EPCOT','Future World West',36],
-                ['EPCOT','World Showcase',93],
+                ['EPCOT','World Showcase',94],
                 ['Future World East','Test Track',20],
                 ['Future World East','Spaceship Earth',8],
                 ['Future World East','Mission: SPACE',3],
@@ -44,7 +44,7 @@ function drawChart() {
                 ['Future World West','The Land',3],
                 ['Future World West','The Seas with Nemo & Friends',1],
                 ['Future World West','Imagination Pavilion',1],
-                ['World Showcase','Food and/or Wine(Drinks)',7],
+                ['World Showcase','Food and/or Wine (Drinks)',7],
                 ['World Showcase','Frozen Ever After',4],
                 ['World Showcase','Norway',2],
                 ['World Showcase','France',4],
@@ -56,7 +56,7 @@ function drawChart() {
                 ['World Showcase','Rose & Crown Pub',1],
                 ['World Showcase','United Kingdom',1],
                 ['World Showcase','Characters',1]];
-  var hsdata = [['Hollywood Studios','Hollywood Boulevard',37],
+  var hsdata = [['Hollywood Studios','Hollywood Boulevard',38],
                 ['Hollywood Studios','Echo Lake',13],
                 ['Hollywood Studios','Grand Avenue',3],
                 ['Hollywood Studios','Pixar Place',42],
@@ -77,7 +77,7 @@ function drawChart() {
                 ['Animal Kingdom','Discovery Island',4],
                 ['Animal Kingdom','Pandora - The World of Avatar',66],
                 ['Animal Kingdom','Africa',57],
-                ['Animal Kingdom','Asia',44],
+                ['Animal Kingdom','Asia',45],
                 ['Animal Kingdom','Dinoland U.S.A.',11],
                 ['Oasis','Atmosphere',1],
                 ['Discovery Island','Tree of Life',1],
@@ -92,14 +92,14 @@ function drawChart() {
                 ['Asia','Kali River Rapids',2],
                 ['Dinoland U.S.A.','DINOSAUR',9],
                 ['Dinoland U.S.A.','Primeval Whirl',1]];
-  var sedata = [['r/WaltDisneyWorld','Spring',33],
+  var sedata = [['r/WaltDisneyWorld','Spring',34],
                 ['r/WaltDisneyWorld','Summer',35],
                 ['r/WaltDisneyWorld','Fall',58],
                 ['r/WaltDisneyWorld','Winter',59],
                 ['Spring','Magic Kingdom',22],
                 ['Spring','EPCOT',4],
                 ['Spring','Hollywood Studios',3],
-                ['Spring','Animal Kingdom',4],
+                ['Spring','Animal Kingdom',5],
                 ['Spring','Extra Magic Hours',0],
                 ['Summer','Magic Kingdom',16],
                 ['Summer','EPCOT',7],
@@ -148,7 +148,12 @@ function drawChart() {
 
   // Sets chart options.
   var options = {
-    sankey: {iterations:75}
+    sankey: {
+      iterations:75,
+      link: {
+        colorMode: 'target',
+      }
+    }
   };
 
   // Instantiates and draws our chart, passing in some options.
